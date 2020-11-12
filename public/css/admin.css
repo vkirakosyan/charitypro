@@ -1,0 +1,9 @@
+*{
+	margin: 0 auto;
+	padding: auto;
+	box-sizing: border-box;
+}
+img{
+	width: 200px;
+	height:auto;
+}

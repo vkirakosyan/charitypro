@@ -1,0 +1,236 @@
+body {
+    background-color: #f5f8fa
+}
+
+.container-fluid {
+	margin-top: 120px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.about-header {
+	background: url(../images/header.jpg) no-repeat;
+	background-size: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about-header h1 {
+	align-self: center;
+  font-size: 3em;
+  font-weight: 500;
+  color: #858585;
+}
+
+.about-container {
+	margin: 0 auto;
+}
+
+.about-container .img img{
+	width: 100%;
+	box-shadow: 20px 20px 50px #808080c4;
+}
+
+.about-container .first .right{
+  	padding: 22px;
+}
+
+.about-container .first .left {
+	display: flex;
+	justify-content: center;
+	border-right: 2px solid #fbb03b;
+}
+
+.about-container .second .left{
+	padding: 22px;
+	border-right: 2px solid #fbb03b;
+}
+
+.about-container .second .right {
+	display: flex;
+	justify-content: center;
+}
+
+.upcoming { 
+  	align-self: center;
+}
+
+.about-container .first, .about-container .second {
+    margin-top: 2%;
+    color: #6d7d82;
+    text-align: center;
+    padding: 1%;
+}
+
+.about-container .second {
+  	margin-top: 5px;
+  	display: flex
+}
+
+.what-they-say {
+  background-size: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: block;
+  position: relative;
+  padding-bottom: 5em;
+}
+
+.what-they-say::after {
+  content: "";
+  background: url(../images/bg-overlay.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.wts-profiles {
+  margin: 0 auto;
+  color: #6d7d82;
+  text-align: center;
+}
+
+.what-they-say h1 {
+  color: #6d7d82;
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+.what-they-say .img-wrapper {
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.img-wrapper img.landscape {
+    max-width: none;
+    max-height: 100%;
+    width: auto;
+}
+
+.description {
+	padding-left: 6%;
+    padding-right: 6%;
+}
+
+.slick-prev {
+	left: 0;
+}
+
+.slick-next {
+	right: 0;
+}
+
+@media screen and (max-width: 991px) {
+	.container-fluid {
+		margin-top: 66px;
+	}
+    .first-row {
+      margin-left: inherit;
+      border-bottom: 2px solid #fbb03b;
+      padding-bottom: inherit;
+    }
+
+    .dropdown {
+      padding-top: inherit;
+    }
+
+    .first-row ul {
+      float: inherit;
+    }
+
+    .first-row li {
+      margin-left: inherit
+    }
+
+    .first-row .nav-item:hover, .second-row .nav-item:hover, .active {
+      display:block;
+      background-size: 100% 25%;
+      background-position: bottom;
+    }
+
+    .second-row {
+      position: inherit;
+      padding-left: inherit;
+    }
+
+    .second-row .nav-item{
+      margin-left: inherit;
+    }
+
+    .second-row {
+      width: inherit;
+    }
+
+    .last-child {
+      position: inherit;
+      right: inherit
+    }
+
+    .last-child div {
+      float: inherit;
+    }
+
+    .vertical_buttons, .user-avatar {
+      display: none;
+    }
+
+    .navbar-brand img {
+      width: 50px;
+      height: 40px
+    }
+
+    .topBar {
+      padding-left: 2%;
+    }
+
+    .join-us-today{
+      padding-top: 0;
+    }
+
+    .about-container .second .left{
+      order: 2
+    }
+
+    .about-container .second .right {
+      order: 1    
+    }
+
+    .about-container .first .left {
+      border-right: none;
+    }
+
+    .about-container .second .left {
+      border-right: none;
+    }
+
+    .about-header {
+      padding-top: 3%;
+      padding-bottom: 3%;
+    }
+
+    .about-header h1 {
+      align-self: center;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+}
+

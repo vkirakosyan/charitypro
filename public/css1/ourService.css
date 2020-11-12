@@ -1,0 +1,63 @@
+.our_service{
+  margin-top: 80px;
+}
+.post_img img{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.serv-details {
+    padding: 20px;
+}
+
+.serv-details a {
+    float: right;
+}
+
+.serv-details h2 {
+    color: #6d7d82!important
+}
+
+.each-service {
+    border-bottom: 2px solid #48c7ec;
+}
+
+.each-service.border-naone {
+    border: none;
+}
+
+.pagination-content {
+    margin: 15px 0;
+}
+.back{
+    cursor: pointer;
+    color: white;
+    background-color: #fbb03b;
+    font-weight: 600;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    outline: none!important;
+    margin-bottom: 2%;
+}
+.service-h2{
+    cursor: pointer;
+}
+.container {
+    width: 1300px;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: inherit;
+    }
+}

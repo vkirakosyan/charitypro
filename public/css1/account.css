@@ -1,0 +1,186 @@
+body {
+  background: #F1F3FA;
+}
+button{
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+}
+.pull_left {
+  float: left;
+}
+.pull_right {
+  float: left;
+}
+.align_right {
+  text-align: right;
+}
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+/* Profile container */
+.profile {
+  margin-top: 10%;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+
+.profile-userpic img {
+  margin-left: 25%;  
+  float: none;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+/*.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5a7291;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}*/
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 1%;
+}
+
+.edit_profile_btn, .edit_profile_form_confirm, .change_password_confirm {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  background-color: #58c7ec;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.add_new_job, .add_new_donation, .add_new_event, .form_job_button, .form_donation_button, .form_event_button {
+  background: #f4b03b;
+  border-color: #f4b03b;
+  color: white;
+}
+.add_new_job:hover, .add_new_donation:hover, .add_new_event:hover, .form_job_button:hover, .form_donation_button:hover, .form_event_button:hover {
+  background-color: #f4b03b75;
+  border-color: #f4b03b;
+}
+.profile-usermenu ul {
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.profile-usermenu ul li {
+  border: 1px solid #f4b03b;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 2%;
+}
+.profile-usermenu ul li:last-child {
+  margin-bottom: 10%;
+}
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: bold;
+}
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.profile-usermenu ul li.active a, .profile-usermenu ul li:hover a, .profile-usermenu ul li:focus a{
+  color: white;
+  text-decoration: none;
+}
+.profile-usermenu ul li.active, .profile-usermenu ul li:hover {
+  background-color: #f4b03b;
+  cursor: pointer;
+}
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
+.job_delete, .donation_delete, .event_delete {
+  background-color: #f4b03b;
+  border-color: #f4b03b;
+}
+.job_edit, .donation_edit, .event_edit {
+  background-color: #58c7ec;
+  border-color: #58c7ec;
+}
+.job_delete:hover, .donation_delete:hover, .event_delete:hover {
+  background-color: #f4b03b75;
+  border-color: #f4b03b;
+}
+.job_edit:hover, .edit_profile_btn:hover, .donation_edit:hover, .event_edit:hover, .edit_profile_form_confirm:hover {
+  background-color: #58c7ec7a;
+  border-color: #58c7ec;
+}
+.donation_img{
+  width: 150px!important;
+  height: 150px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.account_edit_profile_form, 
+.account_jobs_form, 
+.account_donations_form, 
+.account_donations_content, 
+.account_events_content, 
+.account_events_form, 
+.profile-content {
+  display: none;
+}
+.account_jobs_content{
+  display: block;
+}
+.exists-img img, .edit-profile-new-img img {
+  width: 200px;
+  height: 150px;
+}
+.delete-img{
+  background-color: #f4b03b;
+  border: 1px solid #f4b03b;
+  color: white;
+  border-radius: 3px;
+}
+.delete-img:hover {
+  background-color: #f4b03b75;
+  border: 1px solid #f4b03b;
+}
+
+.loader{
+  margin-left: 50%;
+}
+
+#imageToCrop{
+  max-width: 100%;
+}

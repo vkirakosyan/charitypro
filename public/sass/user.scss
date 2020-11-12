@@ -1,0 +1,766 @@
+
+@import './mixins';
+@import './extends';
+
+@import './variables';
+
+.user-content{
+    display: flex;
+    justify-content: space-between;
+    .leftAside{
+        width: 85px;
+        background-color: #ebe7e7;
+        ul{
+            padding-left: 0;
+            margin-bottom: 0;
+            li{
+                position: relative;
+                &:hover:after{
+                    background-color: transparent;
+                }
+                &:after{
+                    content:"";  
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin:auto;
+                    width: 50%;
+                    bottom: 0;
+                    height: 1px; 
+                    background-color: #cccccc;
+                }
+                a{
+                    transition: .4s;
+                    &:hover{
+                        background-color: #c82f2f82;
+                    }
+                    display: flex;
+                    height: 85px;
+                    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        max-width: 65px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 15px;
+                        font-size: 25px;
+                        color: #413f3f;
+                    }
+                }
+            }
+            li:last-child{
+                &:after{
+                    background-color: transparent;
+                }
+            }
+            .activeThumb{
+                &:after{
+                    background-color: transparent;
+                }
+                a{
+                    background-color: $globalColorRed;
+
+                    span{
+                        color:$globalColorWhite
+                    }
+                }
+            }
+        }
+    }
+    .rightAside{
+        width: calc(100% - 65px);
+        padding: 25px;
+        background-color: #fff;
+        h4{
+            padding-bottom: 25px;
+            font-size:21px; 
+            padding-left: 20px;
+        }
+
+        // ***************************************  Edit Blade
+        .form-horizontal{
+            .uploaded-img{
+                max-width: 150px;
+                display: block;
+                margin-bottom: 15px;
+            }
+            .delete-img {
+                background-color: $globalColorRed;
+                padding: 5px 10px;
+                border: 1px solid #dbdbdb;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            
+            .gallery{
+                img{
+                    max-width: 150px;
+                }
+            }
+            
+        }
+        // ********************************************
+
+        // Events more ______________________
+        .eventsTitle{
+            @extend %extend-nameAfter;
+        }
+        .description-profile-more{
+            img{
+                max-width: 300px;
+                float: left;
+                margin-right: 20px;
+            }
+            .desc_more_events{
+                .calendDate{
+                    font-style: italic;
+                    color: #838282;
+                    text-align: right;
+                    display: block;
+                }
+            }
+        }
+        // _________________________________________
+
+        .description-profile{
+            width: 100%;
+            .account_UL{
+                padding-left: 0;
+                li{
+                    box-shadow:0px 2px 2px -1px #ccc;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    span{
+                        font-family: none;
+                    }
+                }
+                li:last-child{
+                    box-shadow: none;
+                }
+            }   
+        }
+    }
+     // ************************** Account SCSS's
+    .userAccount{
+        .profile-content-1{
+            display: flex;
+            justify-content: space-between;
+            
+            .avatar-section{
+                width: 170px;
+                text-align: center;
+                > img{
+                    border-radius: 50%;
+                    max-width: 120px;
+                }
+                .changeSettings{
+                    margin-top: 15px;
+                    img{
+                        max-width: 25px !important;
+                    }
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span{
+                        font-size: 13px;
+                        margin-left: 7px;
+                    }
+                    color: #413f3f;
+                }
+            }
+            .description-profile{
+                width: 100%;
+                
+            }
+        }
+    }
+    // ********************************
+
+    // *****************************Events Container
+    .eventsCotainer{
+       
+        .events_UL{
+            padding-left: 0;
+            .cardEvents{
+                display: flex;
+                align-items: flex-start;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0px 2px 2px 0px #ccc;
+                > img{
+                    max-width: 120px;
+                }
+                .descEvent{
+                    width: calc(100% - 120px);
+                    padding: 10px;
+                    h5{
+                        font-weight: 600;
+                    }
+                    .eventsDescTXT {
+                        font-size: 14px;
+                    }
+                }
+                .tree_buttons{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .eventDate{
+                        font-style: italic;
+                        color: #838282;
+                        .lnr{
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                    .btns{
+                        display: inline-block;
+                        padding: 5px 10px;
+                        color: #fff;
+                        margin: 0px 5px;
+                        cursor: pointer;
+                        text-decoration:none; 
+                    }
+                    .btn_danger{
+                        background-color: $globalColorRed;
+                    }
+                    .btn_success{
+                        background-color: $globalColorGreen;
+                    }
+                    .btn_warning{
+                        background-color: $globalColorYellow;
+                    }
+                }
+            }
+        }
+    }
+    // ******************************
+    // Donation Container __________________________________________
+    .donateContainer{
+        .description-profile{
+            ul{
+                display: flex;
+                padding: 0;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li{
+                    margin-bottom: 15px;
+                    width: 32%;
+                    box-shadow: 0px 2px 8px 1px #ccc;
+                    position: relative;
+                    .parentCol{
+                        position: relative;
+                        overflow: hidden;
+                        height: 100%;
+                        img{
+                            object-fit: contain;
+                            height: 220px;
+                            width: 100%;
+                        }
+                        .donateDesc{
+                            padding: 10px;
+                            .donatePhone{
+                                .lnr{
+                                    color: $globalColorRed;
+                                }
+                            }
+                        }
+                        &:hover .threeBtns{
+                            left: 0;
+                        }
+                        .threeBtns {
+                            position: absolute;
+                            bottom: 0;
+                            height: 100%;
+                            width: 100%;
+                            background-color: rgba(0,0,0,0.7);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .4s;
+                            left: 100%;
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                                font-size: 26px;
+                                margin: 15px;
+                            }
+                        }
+                    }
+                    .donateName{
+                        position: absolute;
+                        z-index: 2;
+                        left: -7px;
+                        color: #fff;
+                        background-color: #c82f2e;
+                        padding: 5px 10px;
+                        top: 20px;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            top: 98%;
+                            border-bottom: 6px solid transparent;
+                            left: 0px;
+                            border-right: 7px solid #c82f2e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ___________________________________
+    // DonateMore container ____________________________________
+    .donateMore{
+        h4{
+            @extend %extend-nameAfter;
+        }
+        .donateWrap {
+            display: flex;
+            justify-content: space-between;
+            .swiperSliderDoante{
+                width: 350px;
+                .big_donate_slide{
+                    padding: 0 10px;
+                    margin: 0 0 5px 0;
+                    box-shadow: 0px 1px 4px 1px #ccc;
+                    img{
+                        width: 100%;
+                        height: 250px;
+                        object-fit: contain;
+                    }
+                    .next_large, .prev_large{
+                        background-color: rgba(0,0,0,0.4);
+                        background-size: 60%;   
+                    }
+                }
+                .small_donate_slide{
+                    padding:10px 5px; 
+                    .swiper-slide{
+                        padding:10px;
+                        margin: 0 0 10px 0;
+                        box-shadow: 0px 1px 4px 1px #ccc;
+                    }
+                    img{
+                        width: 100%;
+                        height: 50px;
+                        object-fit: contain;
+                    }
+                }
+            }
+            .decDonateWrap{
+                padding: 10px;
+                width: calc(100% - 350px);
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    float: right;
+                    span{
+                        margin-right: 5px;
+                        color: $globalColorRed;
+                    }
+                }
+            }
+        }
+    }
+
+    // _____________________________
+    // DonateEdit container ______________________________
+    .donateEdit{
+        h4{
+            @extend %extend-nameAfter;
+        }
+        .editImages{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .imageWrapDelete {
+            width: calc(25% - 10px);
+            border: 1px solid #ccc;
+            img{
+                width: 100% !important;
+                height: 180px;
+                object-fit: contain;
+                object-position: center;
+                margin: auto;
+            }
+            input[type="button"]{
+                margin:0 auto 10px;
+                display: block;
+            }
+        }
+        .update_buttons{
+            margin-top: 15px;
+        }
+        
+        
+    }
+    // ___________________________________-
+
+    // Edit Job _____________________
+    .editJob{
+        h4{
+            @extend %extend-nameAfter;
+        }
+    }
+    // __________________________
+    // Job Container________________________________________
+    .jobContainer{
+        h4{
+            @extend %extend-nameAfter;
+        }
+        ul{
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .badgeJob{
+                display: flex;
+                width: calc(50% - 10px);
+                height: 200px;
+                box-shadow: 0px 0px 8px 1px #ccc;
+                overflow: hidden;
+                transition: .4s;
+                margin-top: 15px;
+                &:hover{
+                    box-shadow: 0px 0px 6px 3px #ccc;
+                    img{
+                        transform: scale(1.04)
+                    }
+                }
+                .imgJob{
+                    width: 180px;
+                    overflow: hidden;
+                    img{
+                        max-width: 100%;
+                        transition: .4s;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .descJob {
+                    padding: 10px;
+                    width: calc(100% - 180px);
+                    p:nth-child(2){
+                        margin-bottom: 5px;
+                        .lnr{
+                            color: $globalColorRed;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                        }
+                    }
+                    p.jobDescTxt{
+                        font-size: 14px;
+                    }
+                    .threeBtnsJob{
+                        display: flex;
+                        justify-content: flex-end;
+                        a{
+                            text-decoration: none;
+                            margin: auto 5px;
+                            color: $globalColorRed;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ______________________________________
+    // Job More ________________________
+    .jobContainerMore{
+        h4{
+            @extend %extend-nameAfter;
+        }
+        .jobMore{
+            margin-top: 15px;
+            img{
+                max-width: 300px;
+                float: left;
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+            .descMoreJob{
+                p:first-child{
+                    margin-bottom: 5px;
+                    .lnr{
+                        color: $globalColorRed;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    // ____________________________
+    .file-label {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: inline-flex;
+        cursor: pointer;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: relative;
+    }
+    .file-input {
+        height: .01em;
+        left: 0;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        width: .01em;
+    }
+    .file-cta {
+        background-color: #f5f5f5;
+        color: #4a4a4a;
+    }
+    .file-cta, .file-name {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        height: 2.25em;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        line-height: 1.5;
+        padding-bottom: calc(.375em - 1px);
+        padding-top: calc(.375em - 1px);
+        position: relative;
+        vertical-align: top;
+        font-size: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        white-space: nowrap;
+    }
+    .file-icon {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 1em;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-right: .5em;
+        width: 1em;
+        .fa {
+            font-size: 14px;
+        }
+    }
+    .btn_warning{
+        padding: 5px 10px;
+        border: 1px solid #dbdbdb;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer; 
+        background-color: $globalColorYellow;
+    }
+} 
+@media screen and (max-width:991px) {
+    .profile-content-1 {
+        .description-profile {
+            .events_UL {
+                .cardEvents {
+                    .tree_buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    .jobContainer{
+        ul{
+            .badgeJob{
+                width: 100% !important;
+            }
+        }
+    }
+        
+}
+@media screen and (max-width:991px) and (min-width:767px){
+    .donateContainer{
+        .description-profile{
+            ul{
+                li{
+                    width: 48% !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .donateWrap {
+        flex-direction: column;
+        .swiperSliderDoante, .decDonateWrap{
+            width: 100% !important;
+
+        }
+    }
+    .donateContainer{
+        .description-profile{
+            ul{
+                li{
+                    width: 98% !important;
+                }
+            }
+        }
+    }
+    .user-content{
+        flex-direction: column;
+        .leftAside{
+            width: 100%;
+            ul{
+                display: flex;
+                li{
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        left: auto;
+                        right: 0;
+                        margin: auto;
+                        width: 1px;
+                        bottom: 0;
+                        height: 50%;
+                        background-color: #cccccc;
+                        top: 0;
+                    }
+                }
+            }
+
+        }
+        .rightAside{
+            width: 100%;
+            h4{
+                text-align: center;
+            }
+            .profile-content-1 {
+                .description-profile {
+                    .events_UL {
+                        .cardEvents {
+                            align-items: center;
+                            flex-direction: column;
+                            .descEvent{
+                                width: 100%;
+                                h5{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jobContainerMore{
+        .jobMore{
+            img{
+                max-width:100% !important;
+                display: block;
+                margin: auto 0 !important;
+                float: none !important;
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) and (min-width:576px){
+    .user-content{
+        .leftAside{
+            ul{
+                display: flex;
+                li{
+                    a{
+                        width: 85px;
+                    }
+                }
+            }
+
+        }
+        .rightAside{
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .user-content{
+        .leftAside{
+            ul{
+                display: flex;
+                li{
+                    a{
+                        width: 65px;
+                        height: 65px;
+                    }
+                }
+            }
+
+        }
+        .rightAside{
+            h4{
+                text-align: center;
+                font-size:17px;
+                padding-left: 0; 
+            }
+            .profile-content-1{
+                
+                .description-profile {
+                    .events_UL {
+                        .cardEvents {
+                            .tree_buttons {
+                              .btns{
+                                padding: 3px 5px;
+                                margin: 0px -1px;
+                                font-size: 10px;
+                              }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jobContainer{
+        ul{
+            .badgeJob{
+                width: 100% !important;
+                flex-direction: column;
+                height: auto !important;
+                align-items: center;
+                .imgJob{
+                    height: 200px;
+                    width: 100% !important;
+                    text-align: center;
+                }
+                .descJob{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,313 @@
+.commonWrapRight:after, .commonWrapLeft:after {
+  position: absolute;
+  display: inline-block;
+  border-top: 6px solid transparent;
+  border-right: 6px solid #eee;
+  border-bottom: 6px solid transparent;
+  top: 45px;
+  content: ""; }
+
+.commonWrapRight:before, .commonWrapLeft:before {
+  position: absolute;
+  display: inline-block;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #eee;
+  border-bottom: 7px solid transparent;
+  border-right-color: #dee2e6;
+  top: 45px;
+  content: ""; }
+
+.wayPath {
+  padding: 15px 0;
+  border-top: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+  margin: 15px 0 35px; }
+  .wayPath p a {
+    color: #b1b1b1;
+    position: relative;
+    text-decoration: none; }
+    .wayPath p a:after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 1px;
+      background-color: #000;
+      height: 20px;
+      transform: rotate(15deg); }
+  .wayPath p span {
+    margin-left: 25px;
+    display: inline-block; }
+
+.ourAproach {
+  background-color: #c82f2f;
+  padding: 55px 35px;
+  color: #fff; }
+
+#heartBlock {
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 300px; }
+  #heartBlock:after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/heart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background-color: #212121; }
+
+.heartBg {
+  background-color: #212121; }
+
+.ourMission h2 {
+  font-size: 45px;
+  position: relative;
+  margin-bottom: 25px; }
+  .ourMission h2:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #c82f2f; }
+
+.ourMission p {
+  font-size: 15px;
+  color: #b1b1b1; }
+
+.missionUl {
+  position: relative;
+  z-index: 2;
+  padding: 35px 45px;
+  margin-top: 25px; }
+  .missionUl li {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0; }
+    .missionUl li > span {
+      color: #fff;
+      padding-right: 20px;
+      font-size: 45px;
+      font-weight: 600;
+      border-right: 1px solid;
+      margin-right: 25px; }
+    .missionUl li .rightSectionMission b {
+      color: #fff;
+      font-size: 20px; }
+    .missionUl li .rightSectionMission span {
+      color: #b1b1b1;
+      font-family: sans-serif;
+      height: 70px;
+      display: block;
+      overflow: hidden;
+      font-size: 17px; }
+
+.headerMission {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 45px;
+  top: 250px; }
+
+.ourMissionWrap {
+  background: #fff;
+  padding: 75px 45px;
+  top: 270px;
+  position: relative;
+  z-index: 2; }
+  .ourMissionWrap .textMission > p {
+    color: #b1b1b1; }
+  .ourMissionWrap .textMission ul li {
+    color: #b1b1b1;
+    font-family: sans-serif; }
+    .ourMissionWrap .textMission ul li span {
+      color: #c82f2f;
+      font-weight: 600;
+      font-size: 16px;
+      margin-right: 15px; }
+
+#history {
+  position: relative; }
+  #history:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    height: 100%;
+    width: 2px;
+    margin: auto;
+    top: 0;
+    z-index: -1; }
+
+.historyHeader {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 55px; }
+
+.commonWrapRight {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 25px;
+  position: relative;
+  width: calc(100% - 30px);
+  margin-left: auto; }
+  .commonWrapRight:before {
+    left: -8px;
+    transform: rotate(0deg); }
+  .commonWrapRight:after {
+    left: -6px;
+    transform: rotate(0deg); }
+  .commonWrapRight .dateTop {
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: auto;
+    left: -227px;
+    flex-direction: row-reverse; }
+    .commonWrapRight .dateTop p {
+      font-family: sans-serif;
+      color: #b1b1b1;
+      margin-bottom: 0; }
+    .commonWrapRight .dateTop > span {
+      margin: 0 15px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      font-size: 26px;
+      display: block;
+      text-align: center;
+      line-height: 45px; }
+  .commonWrapRight h4 {
+    color: #c82f2f;
+    margin: 5px 0 25px; }
+  .commonWrapRight p {
+    font-family: sans-serif;
+    color: #b1b1b1;
+    font-size: 17px; }
+
+.commonWrapLeft {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 25px;
+  position: relative;
+  width: calc(100% - 30px);
+  margin-right: auto; }
+  .commonWrapLeft:before {
+    right: -8px;
+    transform: rotate(180deg); }
+  .commonWrapLeft:after {
+    right: -6px;
+    transform: rotate(180deg); }
+  .commonWrapLeft h4 {
+    color: #c82f2f;
+    margin: 5px 0 25px; }
+  .commonWrapLeft p {
+    font-family: sans-serif;
+    color: #b1b1b1;
+    font-size: 17px; }
+  .commonWrapLeft .dateTop {
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -227px;
+    left: auto;
+    flex-direction: row; }
+    .commonWrapLeft .dateTop p {
+      font-family: sans-serif;
+      color: #b1b1b1;
+      margin-bottom: 0; }
+    .commonWrapLeft .dateTop > span {
+      margin: 0 15px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      font-size: 26px;
+      display: block;
+      text-align: center;
+      line-height: 45px; }
+
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  #heartBlock {
+    margin-top: 50px;
+    margin-bottom: 20px; }
+  .headerMission {
+    font-size: 45px;
+    top: -20px;
+    left: 30px;
+    margin-bottom: 25px; }
+  .ourMissionWrap {
+    top: -20px;
+    left: 30px; } }
+
+@media screen and (max-width: 767px) {
+  #heartBlock {
+    margin-top: 50px;
+    margin-bottom: 20px; }
+    #heartBlock::after {
+      background-image: none; }
+  #history:after {
+    display: none; }
+  .ourAproach {
+    margin-bottom: 25px; }
+  .headerMission {
+    font-size: 45px;
+    top: -20px;
+    left: 15px;
+    margin-bottom: 25px; }
+  .ourMissionWrap {
+    top: -20px;
+    left: 15px; }
+  .commonWrapRight {
+    margin-bottom: 15px; }
+    .commonWrapRight .dateTop {
+      left: -90px !important; }
+  .commonWrapLeft {
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 15px; }
+    .commonWrapLeft .dateTop {
+      left: -90px !important;
+      width: 100%; }
+    .commonWrapLeft:before {
+      right: auto;
+      left: -8px;
+      transform: rotate(0deg); }
+    .commonWrapLeft:after {
+      right: auto;
+      left: -6px;
+      transform: rotate(0deg); } }
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  footer .footerLogo > span {
+    justify-content: center; } }
+
+@media screen and (max-width: 576px) {
+  .commonWrapRight, .commonWrapLeft {
+    width: calc(100% - 70px); }
+  .headerMission {
+    font-size: 20px; }
+  .missionUl {
+    padding: 35px 25px; }
+    .missionUl li > span {
+      font-size: 35px; }
+  .ourMissionWrap {
+    top: -20px;
+    left: 7px;
+    padding: 25px 15px;
+    width: 100%; } }

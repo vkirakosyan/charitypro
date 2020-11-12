@@ -1,0 +1,24 @@
+{
+  "name": "charitypro",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w public/sass/style.scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://shotabaleyan@bitbucket.org/shotabaleyan/charitypro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/shotabaleyan/charitypro#readme"
+}
